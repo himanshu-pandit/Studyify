@@ -34,9 +34,9 @@ public class LoginFragment extends Fragment {
 
 
 
-    EditText phone,password;
-    Button signIn;
-    TextView signUp;
+    EditText phoneLogin,passwordLogin;
+    Button signInLogin;
+    TextView signUpLogin;
 
     public LoginFragment() {
         // Required empty public constructor
@@ -80,10 +80,10 @@ public class LoginFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_login, container, false);
 
-        phone = view.findViewById(R.id.phoneLogin);
-        password = view.findViewById(R.id.passwordLogin);
-        signUp = view.findViewById(R.id.signUpLogin);
-        signIn = view.findViewById(R.id.signInLogin);
+        phoneLogin = view.findViewById(R.id.phoneLogin);
+        passwordLogin = view.findViewById(R.id.passwordLogin);
+        signUpLogin = view.findViewById(R.id.signUpLogin);
+        signInLogin = view.findViewById(R.id.signInLogin);
 
         return view;
     }
@@ -94,7 +94,7 @@ public class LoginFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
-        signUp.setOnClickListener(new View.OnClickListener() {
+        signUpLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 RegistrationFragment registrationFragment = new RegistrationFragment();

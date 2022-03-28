@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.hktech.studyify.R;
 
@@ -24,7 +25,8 @@ public class RegistrationFragment extends Fragment {
 
 
     EditText name,phone,password,confirmPassword;
-    Button signUp,signIn;
+    TextView signIn;
+    Button signUp;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -87,18 +89,13 @@ public class RegistrationFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        signIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        signIn.setOnClickListener(view1 -> {
 
-          /*      LoginFragment loginFragment = new LoginFragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.framelayout, loginFragment,null)
-                        .addToBackStack(null)
-                        .commit();
-
-           */
-            }
+            LoginFragment loginFragment = new LoginFragment();
+            getActivity().getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.framelayout,loginFragment,null)
+                    .addToBackStack(null)
+                    .commit();
         });
     }
 }
