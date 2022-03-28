@@ -94,7 +94,7 @@ public class RegistrationFragment extends Fragment {
             LoginFragment loginFragment = new LoginFragment();
             getActivity().getSupportFragmentManager().beginTransaction()
                     .replace(R.id.framelayout,loginFragment,null)
-                    .addToBackStack(null)
+                    //.addToBackStack(null)
                     .commit();
         });
     }
